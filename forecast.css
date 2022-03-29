@@ -1,0 +1,345 @@
+/* FOR SCSS:
+
+font-size: 0.6em;
+font-weight 200;
+border-radius-item: 0.6em;
+border-radius-day: 3em;
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap");
+
+/* CSS reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1505533542167-8c89838bb19e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* takes whole screen  */
+  height: 100vh;
+
+  /* no scroll */
+  overflow: hidden;
+}
+
+.container,
+footer {
+  color: rgb(3, 34, 70);
+
+  padding: 1.25em 4.3em;
+}
+
+/* ------- DATE */
+
+.date-container {
+  font-weight: 200;
+}
+
+.date-container .time {
+  font-size: 4.3em;
+}
+
+.date-container #am-pm {
+  font-size: 0.6em;
+  margin-left: 0.6em;
+}
+
+.date-container .date {
+  font-size: 1.8em;
+}
+
+/* ------- PLACE */
+
+.place-container {
+  text-align: end;
+}
+
+.place-container .time-zone {
+  font-size: 1em;
+  font-weight: 200;
+}
+
+.place-container .country {
+  font-size: 0.6em;
+  font-weight: 700;
+}
+
+/* ------- PLACE */
+
+.current-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.current-info .others {
+  display: flex;
+  flex-direction: column;
+  margin: 0.6em 0;
+  padding: 1.2em;
+  border-radius: 10px;
+  /* border: 0.06em solid rgb(37, 37, 37); */
+
+  background: rgba(162, 162, 172, 0.507);
+}
+
+.current-info .others .weather-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* see BAM selecting and child classes */
+
+/* ------- SLIDER */
+
+footer {
+  background: rgba(162, 162, 172, 0.637);
+  padding: 1.5em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* today */
+
+.future-forecast .today {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.future-forecast .today .day {
+  padding: 0.3em 0.6em;
+  background: #b4b4b4;
+  border-radius: 3em;
+  text-align: center;
+}
+
+.future-forecast .today .temp {
+  font-size: 1.12em;
+  padding-top: 0.9em;
+}
+
+.future-forecast .weather-forecast {
+  display: flex;
+}
+
+/* rest of the days */
+
+.future-forecast .weather-forecast-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 0.6em;
+  padding: 0.9em;
+  border: 0.03em solid rgb(209, 206, 206);
+  border-radius: 0.6em;
+}
+
+.weather-forecast .weather-forecast-item .day {
+  padding: 0.3em 0.6em;
+  background: #b4b4b4;
+  border-radius: 3em;
+  text-align: center;
+}
+
+.weather-forecast .weather-forecast-item .temp {
+  font-weight: 300;
+}
+
+/* ------- MEDIA QUERIES */
+
+@media only screen and (max-width: 730px) {
+  /* scrollable footer */
+  footer {
+    justify-content: start;
+    align-items: none;
+    /* enables scroll on y-axis */
+    overflow-y: scroll;
+  }
+
+  .future-forecast .today .temp {
+    font-size: 1em;
+  }
+
+  .date-container .time {
+    font-size: 3em;
+  }
+
+  .date-container #am-pm {
+    font-size: 1.25em;
+  }
+
+  .date-container .date {
+    font-size: 1.25em;
+  }
+
+  .place-container {
+    text-align: end;
+    margin-top: 0.9em;
+  }
+
+  .place-container .time-zone {
+    font-size: 1.25em;
+  }
+
+  .current-info .others {
+    padding: 0.75em;
+  }
+
+  .current-info .others .weather-item {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .future-forecast {
+    justify-content: start;
+    align-items: none;
+    overflow-x: scroll;
+  }
+}
