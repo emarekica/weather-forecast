@@ -397,6 +397,64 @@ The `Response` object, in turn, does not directly contain the actual JSON respon
 
 <br><br>
 
+## HOISTING - Invoking (calling) a function before it has been defined
+
+<br>
+
+**Expression Functions**
+<br>
+Function expressions can be stored in a variable so they do not need function names. They will also be named as an anonymous function (a function without a name).
+<br>
+
+To invoke (call) these functions they always need a variable name. **This kind of function won't work if it is called before it has been defined which means Hoisting is not happening here.** We must always define the expression function first and then invoke it.
+<br><br>
+
+```js
+let lastName = function (family) {
+  console.log("My last name is " + family);
+};
+let x = lastName("Lopez");
+```
+
+<br><br>
+
+This is how you can write it in ECMAScript 6:
+<br>
+
+```js
+lastName = (family) => console.log("My last name is " + family);
+x = lastName("Lopez");
+```
+
+<br><br>
+
+**Declaration Functions**
+<br>
+
+Functions declared with the following syntax are not executed immediately. **They are "saved for later use" and will be executed later, when they are invoked (called upon). This type of function works if you call it BEFORE or AFTER where is has been defined.** If you call a declaration function before it has been defined Hoisting works properly.
+<br><br>
+
+```js
+function Name(name) {
+  console.log("My cat's name is " + name);
+}
+Name("Chloe");
+```
+
+<br><br>
+
+Hoisting example:
+<br>
+
+```js
+Name("Chloe");
+function Name(name) {
+  console.log("My cat's name is " + name);
+}
+```
+
+<br><br>
+
 ---
 
 <br>
