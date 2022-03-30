@@ -206,7 +206,7 @@ The `getDay()` method returns the **day of the week** for the specified date acc
 The `getHours()` method returns the hour for the specified date, according to local time.
 <br>
 
-Monday, July 20, 2022, **04:20**
+Monday, July 20, 2022, **04**:20
 <br><br>
 
 **Return value**
@@ -229,6 +229,37 @@ console.log(hours); // 23
 
 <br><br>
 
+## `getMinutes()`
+
+<br>
+
+The getMinutes() method returns the minutes in the specified date according to local time.
+<br>
+
+Monday, July 20, 2022, 04:**20**
+<br><br>
+
+```js
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getMinutes());
+// expected output: 20
+
+var Xmas95 = new Date("December 25, 1995 23:15:30");
+var minutes = Xmas95.getMinutes();
+
+console.log(minutes); // 15
+```
+
+<br><br>
+
+**Return value**
+<br>
+
+An integer number, between 0 and 59, representing the minutes in the given date according to local time.
+
+<br><br>
+
 - [Date constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date)
 
 - [Date.prototype.getMonth()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth)
@@ -238,6 +269,8 @@ console.log(hours); // 23
 - [Date.prototype.getDay()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay)
 
 - [Date.prototype.getHours()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours)
+
+- [Date.prototype.getMinutes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes)
   <br><br>
 
 ---
