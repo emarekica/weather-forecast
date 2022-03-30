@@ -273,11 +273,15 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: smaller;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
 
   margin: 0 0.6em;
   padding: 0.9em;
-  border: 0.03em solid rgb(209, 206, 206);
+  /* border: 0.03em solid rgb(216, 216, 216); */
   border-radius: 0.6em;
+  background: rgba(65, 65, 65, 0.2);
 }
 
 .weather-forecast .weather-forecast-item .day {
