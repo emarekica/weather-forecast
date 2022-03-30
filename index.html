@@ -15,20 +15,9 @@
         <article class="date-container">
           <p class="time" id="time">12:30<span id="am-pm">PM</span></p>
           <p class="date" id="date">Monday, 24 May</p>
-          <div class="others" id="current-weather-items">
-            <div class="weather-item">
-              <p>Humidity</p>
-              <p>95%</p>
-            </div>
-            <div class="weather-item">
-              <p>Wind Speed</p>
-              <p>222</p>
-            </div>
-            <div class="weather-item">
-              <p>Pressure</p>
-              <p>1013 hPa</p>
-            </div>
-          </div>
+
+          <!-- current weather -->
+          <div class="others" id="current-weather-items"></div>
         </article>
 
         <!-- place -->
@@ -109,6 +98,15 @@
         </div>
       </article>
     </footer>
+
+    <!-- moment script for formatting UNIX -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <script src="forecast.js"></script>
   </body>
 </html>

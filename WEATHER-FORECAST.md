@@ -459,6 +459,58 @@ function Name(name) {
 
 <br>
 
+## Formatting UNIX time
+
+<br>
+
+When fetching sunrise/sunset data from API, you get time in this UNIX format:
+
+    1648615200
+    1648660813
+
+<br>
+
+To format it, copy from this [CDN moment website](https://cdnjs.com/libraries/moment.js):
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<br>
+
+Paste it into HTML, just above your JS script.
+<br>
+
+In JS, you paste it like this:
+<br>
+
+```js
+currentWeatherItemsEl.innerHTML = ` 
+  
+  // rest of the code
+
+  <div class="weather-item">
+    <p>Sunrise</p>
+    <p>${window.moment(sunrise * 1000).format("HH:mm a")}</p>
+  </div>
+  <div class="weather-item">
+    <p>Sunset</p>
+    <p>${window.moment(sunset * 1000).format("HH:mm a")}</p>
+  </div>
+  `;
+```
+
+<br>
+
+**Multiply it by 1000 to get the current time.**
+
+Unix time is the number of seconds since the epoch (1 Jan 1970).
+
+Since JavaScript uses milliseconds internally, the Date object expects the number of milliseconds, hence the 1000-fold difference.
+<br><br>
+
+---
+
+<br>
+
 ## 4. Improvements
 
 <br>

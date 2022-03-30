@@ -76,12 +76,71 @@ function getWeatherData() {
     let { latitude, longitude } = success.coords;
 
     // do API call based on geolocation
+    // to get celsius, pass in "units=metric"
     fetch(
       `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`
     )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+
+        // use fetched data
+        showWeatherData(data);
       });
+  });
+}
+
+// humidity, wind, pressure from "current" object
+function showWeatherData(data) {
+  const { humidity, pressure, sunrise, sunset, wind_speed } = data.current;
+
+  // render API data
+
+  currentWeatherItemsEl.innerHTML = `<div class="weather-item">
+    <p>Humidity</p>
+    <p>${humidity}%</p>
+  </div>
+  <div class="weather-item">
+    <p>Wind Speed</p>
+    <p>${wind_speed} m/s</p>
+  </div>
+  <div class="weather-item">
+    <p>Pressure</p>
+    <p>${pressure} hPa</p>
+  </div>
+  <div class="weather-item">
+    <p>Sunrise</p>
+    <p>${window.moment(sunrise * 1000).format("HH:mm a")}</p>
+  </div>
+  <div class="weather-item">
+    <p>Sunset</p>
+    <p>${window.moment(sunset * 1000).format("HH:mm a")}</p>
+  </div>
+  `;
+
+  // "daily" object contains 8 arrays with data for today at position 0, and data for the rest of the week at position 1-7
+
+  let restOfTheWeekForecast = "";
+
+  data.daily.forEach((day, index) => {
+    // today
+    if (index == 0) {
+    }
+
+    // rest of the week
+    else {
+      restOfTheWeekForecast += `
+      <div class="weather-forecast-item">
+      <p class="day">${window.moment(day.dt * 1000).format("ddd")}</p>
+      <img
+        src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png"
+        alt="weather icon"
+        class="w-icon"
+      />
+      <p class="temp">Night: ${day.temp.night}&#176; C</p>
+      <p class="temp">Day: ${day.temp.day}&#176; C</p>
+    </div>
+      `;
+    }
   });
 }
