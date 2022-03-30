@@ -77,7 +77,11 @@ function getWeatherData() {
 
     // do API call based on geolocation
     fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}`
-    );
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   });
 }
