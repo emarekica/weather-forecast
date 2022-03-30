@@ -16,5 +16,8 @@ setInterval(() => {
   // returns current date and time
   const time = new Date();
 
-  // format date to get different
+  // format date to get different values
+  const month = time.getMonth();
+  const date = time.getDate();
+  const day = time.getDay();
 }, 1000);

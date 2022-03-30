@@ -73,7 +73,8 @@ Date & time update without API
 
 <br><br>
 
-`Date()``
+## `Date()`
+
 <br>
 
 Creates a JavaScript `Date` instance that represents a single moment in time in a platform-independent format.`Date` objects contain a `Number` that represents milliseconds since 1 January 1970 UTC.
@@ -89,6 +90,30 @@ new Date(); // returns current date & time
 
 ```
 
+<br>
+
+```js
+const date1 = new Date("December 17, 1995 03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+const date2 = new Date("1995-12-17T03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+console.log(date1 === date2);
+// expected output: false;
+
+console.log(date1 - date2);
+// expected output: 0
+```
+
+<br><br>
+
+**Return value**
+<br>
+
+Calling `new Date()` (the `Date()` constructor) returns a `Date` object. If called with an invalid `date` string, it returns a `Date` object whose `toString()` method returns the literal string Invalid Date.
+
+Calling the `Date()` function (without the `new` keyword) returns a string representation of the current date and time, exactly as `new Date().toString()` does. Any arguments given in a `Date()` function call (without the new keyword) are ignored; regardless of whether it's called with an invalid date string — or even called wth any arbitrary object or other primitive as an argument — it always returns a string representation of the current date and time.
 <br><br>
 
 ### How to create new date
@@ -106,11 +131,15 @@ let birthday = new Date(1995, 11, 17, 13, 24, 0);
 
 <br><br>
 
-`getMonth()`
+## `getMonth()`
+
 <br>
 
-The `getMonth()` method returns the month in the specified date according to local time, as a zero-based value (where zero indicates the first month of the year).
+The `getMonth()` method returns **the month** in the specified date according to local time, as a zero-based value (where zero indicates the first month of the year).
 <br>
+
+Monday, **July** 20, 2022, 04:20
+<br><br>
 
 **Return value**
 <br>
@@ -127,11 +156,16 @@ console.log(moonLanding.getMonth()); // (January gives 0)
 
 <br><br>
 
-`getDate()`
+## `getDate()`
+
 <br>
 
-The `getDate()` method returns the day of the month for the specified date according to local time.
+The `getDate()` method returns the **day of the month** for the specified date according to local time.
 <br>
+
+Monday, July **20**, 2022, 04:20
+
+<br><br>
 
 **Return value**
 <br>
@@ -154,11 +188,56 @@ console.log(day); // 25
 
 <br><br>
 
+## `getDay()`
+
+<br>
+
+The `getDay()` method returns the **day of the week** for the specified date according to local time, where **0 represents Sunday**.
+<br>
+
+**Monday**, July 20, 2022, 04:20
+
+<br><br>
+
+## `getHours()`
+
+<br>
+
+The `getHours()` method returns the hour for the specified date, according to local time.
+<br>
+
+Monday, July 20, 2022, **04:20**
+<br><br>
+
+**Return value**
+<br>
+
+An integer number, between 0 and 23, representing the hour for the given date according to local time.
+<br><br>
+
+```js
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getHours());
+// expected output: 4
+
+let Xmas95 = new Date("December 25, 1995 23:15:30");
+let hours = Xmas95.getHours();
+
+console.log(hours); // 23
+```
+
+<br><br>
+
 - [Date constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date)
 
 - [Date.prototype.getMonth()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth)
 
 - [Date.prototype.getDate()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate)
+
+- [Date.prototype.getDay()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay)
+
+- [Date.prototype.getHours()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours)
   <br><br>
 
 ---
