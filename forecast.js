@@ -37,6 +37,10 @@ const months = [
   "Dec",
 ];
 
+// API key value
+
+const API_KEY = "0df4efe4d3a7d705c79d4a61ee303468";
+
 // updating date & time
 setInterval(() => {
   // returns current date and time
@@ -57,3 +61,23 @@ setInterval(() => {
   timeEl.innerHTML = `${hour12}:${minutes} ${amPm}`;
   dateEl.innerHTML = `${days[day]}, ${date} ${months[month]}`;
 }, 1000);
+
+// API
+
+getWeatherData();
+
+// call API
+function getWeatherData() {
+  // use navigator to get geolocation
+  navigator.geolocation.getCurrentPosition((success) => {
+    console.log(success);
+
+    // destructuring of coords object into lat & long
+    let { latitude, longitude } = success.coords;
+
+    // do API call based on geolocation
+    fetch(
+      `https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}`
+    );
+  });
+}

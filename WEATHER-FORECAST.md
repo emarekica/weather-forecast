@@ -291,6 +291,116 @@ An integer number, between 0 and 59, representing the minutes in the given date 
 
 <br>
 
+## API's
+
+<br>
+
+- [Openweather API](https://openweathermap.org/api)
+
+<br><br>
+
+Search for your generated API KEY when signed in.
+
+<br><br>
+
+## Navigator
+
+<br>
+
+The JavaScript `navigator` object is used for browser detection. It can be used to get browser information such as `appName`, `appCodeName`, `userAgent` etc.
+
+The `navigator` object is the window property, so it can be accessed by: `window. navigator.`
+<br><br>
+
+## Geolocation
+
+<br>
+
+The `Geolocation` interface represents an object able to programmatically obtain the position of the device. It gives Web content access to the location of the device. This allows a Web site or app to offer customized results based on the user's location.
+
+An object with this interface is obtained using the `navigator.geolocation` property implemented by the `Navigator` object.
+
+This feature is available only in secure contexts (HTTPS), in some or all supporting browsers.
+<br><br>
+
+[Geolocation API](https://w3c.github.io/geolocation-api/#geolocation_interface)
+
+<br><br>
+
+- [One Call API](https://openweathermap.org/api/one-call-api)
+  <br><br>
+
+- [Navigator](https://developer.mozilla.org/en-US/docs/Web/API/Navigator)
+
+- [geolocation.getCurrentPosition()]()
+  <br><br>
+
+## fetch()
+
+<br>
+
+The global `fetch()` **method** starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
+
+The promise resolves to the `Response` object representing the response to your request.
+
+A `fetch()` promise only rejects when a network error is encountered (which is usually when there's a permissions issue or similar). A `fetch()` promise does not reject on HTTP errors (404, etc.). Instead, a `then()` handler must check the `Response.ok` and/or `Response.status` properties.
+
+`fetch()` method is available in pretty much any context in which you might want to fetch resources.
+<br><br>
+
+The `fetch()` method's parameters are identical to those of the `Request()` constructor.
+<br><br>
+
+**Syntax**
+
+    const fetchResponsePromise = fetch(resource [, init])
+
+<br><br>
+
+**Parameters**
+<br>
+
+1. **resource**
+
+- a string or any other object with a stringifier — including a URL object — that provides the URL of the resource you want to fetch.
+- A `Request` object
+
+2. optional: an object containing any custom settings that you want to apply to the request
+
+<br><br>
+
+**Return value**
+<br>
+
+A `Promise` that resolves to a `Response` object.
+
+<br><br>
+
+**Basic fetch request**
+<br>
+
+```js
+fetch("http://example.com/movies.json")
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+```
+
+<br><br>
+
+Here we are fetching a JSON file across the network and printing it to the console. The simplest use of `fetch()` takes one argument — the path to the resource you want to fetch — and does not directly return the JSON response body but instead returns a promise that resolves with a `Response` object.
+
+The `Response` object, in turn, does not directly contain the actual JSON response body but is instead a representation of the entire HTTP response. So, to extract the JSON body content from the `Response` object, we use the `json()` method, which returns a second promise that resolves with the result of parsing the response body text as JSON.
+
+<br><br>
+
+[fetch()](https://developer.mozilla.org/en-US/docs/Web/API/fetch)
+
+<br><br>
+
+---
+
+<br>
+
 ## 4. Improvements
 
 <br>
@@ -300,16 +410,6 @@ An integer number, between 0 and 59, representing the minutes in the given date 
 <br><br>
 
 ---
-
-<br>
-
-## API's
-
-<br>
-
-- [Openweather API](https://openweathermap.org/api)
-
-<br>
 
 ## Resources
 
