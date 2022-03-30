@@ -196,6 +196,20 @@ The `getDay()` method returns the **day of the week** for the specified date acc
 <br>
 
 **Monday**, July 20, 2022, 04:20
+<br><br>
+
+**Return values**
+<br>
+
+An integer number, between 0 and 6, corresponding to the day of the week for the given date, according to local time: 0 for Sunday, 1 for Monday, 2 for Tuesday, and so on.
+<br><br>
+
+```js
+var Xmas95 = new Date("December 25, 1995 23:15:30");
+var weekday = Xmas95.getDay();
+
+console.log(weekday); // 1
+```
 
 <br><br>
 
