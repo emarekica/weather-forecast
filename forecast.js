@@ -8,7 +8,7 @@ const currentWeatherItemsEl = document.getElementById("current-weather-items");
 const timeZoneEl = document.getElementById("time-zone");
 const countryEl = document.getElementById("country");
 
-const futureForecastEl = document.getElementById("weather-forecas");
+const futureForecastEl = document.getElementById("weather-forecast");
 const currentTempEl = document.getElementById("current-temp");
 
 // converting day & month values to Mon-Sub & Jan-Dec
@@ -143,4 +143,7 @@ function showWeatherData(data) {
       `;
     }
   });
+
+  // add it to the DOM
+  futureForecastEl.innerHTML = restOfTheWeekForecast;
 }
