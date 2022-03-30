@@ -58,7 +58,9 @@ setInterval(() => {
   const amPm = hour >= 12 ? "PM" : "AM";
 
   // set time & date
-  timeEl.innerHTML = `${hour12}:${minutes} ${amPm}`;
+  timeEl.innerHTML = `${hour12 < 10 ? "0" + hour12 : hour12}:${
+    minutes < 10 ? "0" + minutes : minutes
+  } ${amPm}`;
   dateEl.innerHTML = `${days[day]}, ${date} ${months[month]}`;
 }, 1000);
 
@@ -94,6 +96,10 @@ function getWeatherData() {
 function showWeatherData(data) {
   const { humidity, pressure, sunrise, sunset, wind_speed } = data.current;
 
+  // timezone and coordinates
+  timeZoneEl.innerHTML = data.timezone;
+  countryEl.innerHTML = data.lat + "N " + data.lon + "E";
+
   // render API data
 
   currentWeatherItemsEl.innerHTML = `<div class="weather-item">
@@ -125,6 +131,18 @@ function showWeatherData(data) {
   data.daily.forEach((day, index) => {
     // today
     if (index == 0) {
+      currentTempEl.innerHTML = `
+      <img
+          src="http://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png"
+          alt="Weather icon"
+          class="w-icon"
+        />
+        <div class="current-day">
+          <p class="day">Monday</p>
+          <p class="temp">Night: ${day.temp.night}&#176; C</p>
+          <p class="temp">Day: ${day.temp.day}&#176; C</p>
+        </div>
+      `;
     }
 
     // rest of the week
@@ -144,6 +162,6 @@ function showWeatherData(data) {
     }
   });
 
-  // add it to the DOM
+  // add to the DOM
   futureForecastEl.innerHTML = restOfTheWeekForecast;
 }
