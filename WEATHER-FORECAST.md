@@ -10,6 +10,8 @@ Working notes
 
 1. [HTML](#1-html)
 2. [CSS](#2-css)
+3. [JS](#3-js)
+4. [Improvements](#4-improbements)
 
 <br><br>
 
@@ -51,6 +53,39 @@ Working notes
 <br>
 
     overflow-y: scroll
+
+<br><br>
+
+---
+
+<br>
+
+## 3. JS
+
+<br>
+
+Date & time update without API
+<br>
+
+1. with `setInterval()` and we don't set the interval, but it keeps being called infinitelly
+
+- this function is called every 1 sec
+
+<br><br>
+
+- [Date constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date)
+
+<br><br>
+
+---
+
+<br>
+
+## 4. Improvements
+
+<br>
+
+- [] Add search (use another API)
 
 <br><br>
 
