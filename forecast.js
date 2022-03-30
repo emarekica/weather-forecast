@@ -13,5 +13,8 @@ const currentTempEl = document.getElementById("current-temp");
 
 // updating date & time
 setInterval(() => {
-  const time
+  // returns current date and time
+  const time = new Date();
+
+  // format date to get different
 }, 1000);

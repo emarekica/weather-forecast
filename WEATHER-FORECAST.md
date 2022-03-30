@@ -73,9 +73,93 @@ Date & time update without API
 
 <br><br>
 
-- [Date constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date)
+`Date()``
+<br>
+
+Creates a JavaScript `Date` instance that represents a single moment in time in a platform-independent format.`Date` objects contain a `Number` that represents milliseconds since 1 January 1970 UTC.
+<br>
+
+The only correct way to instantiate a new Date object is by using the `new` operator.
+<br><br>
+
+When no parameters are provided, the newly-created Date object represents the current date and time as of the time of instantiation.
+
+```
+new Date(); // returns current date & time
+
+```
 
 <br><br>
+
+### How to create new date
+
+<br>
+
+```js
+let today = new Date();
+let sameDay = new Date(today);
+let birthday = new Date("December 17, 1995 13:24:00");
+let birthday = new Date("1995-12-17T13:24:00");
+let birthday = new Date(1995, 11, 17); // the month is 0-indexed
+let birthday = new Date(1995, 11, 17, 13, 24, 0);
+```
+
+<br><br>
+
+`getMonth()`
+<br>
+
+The `getMonth()` method returns the month in the specified date according to local time, as a zero-based value (where zero indicates the first month of the year).
+<br>
+
+**Return value**
+<br>
+
+An integer number, between 0 and 11, representing the month in the given date according to local time. 0 corresponds to January, 1 to February, and so on.
+<br>
+
+```js
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getMonth()); // (January gives 0)
+// expected output: 6
+```
+
+<br><br>
+
+`getDate()`
+<br>
+
+The `getDate()` method returns the day of the month for the specified date according to local time.
+<br>
+
+**Return value**
+<br>
+
+An integer number, between 1 and 31, representing the day of the month for the given date according to local time.
+<br>
+
+```js
+const birthday = new Date("August 19, 1975 23:15:30");
+const date1 = birthday.getDate();
+
+console.log(date1);
+// expected output: 19
+
+var Xmas95 = new Date("December 25, 1995 23:15:30");
+var day = Xmas95.getDate();
+
+console.log(day); // 25
+```
+
+<br><br>
+
+- [Date constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date)
+
+- [Date.prototype.getMonth()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth)
+
+- [Date.prototype.getDate()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate)
+  <br><br>
 
 ---
 
