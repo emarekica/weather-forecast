@@ -428,5 +428,52 @@ footer {
 }
 
 @media only screen and (max-width: 500px) {
+  .container {
+    padding-left: 2em;
+  }
+
+  #date {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .current-info {
+    justify-content: center;
+  }
+
+  .current-info .others {
+    padding: 0;
+  }
+
+  .current-info .others .weather-item {
+    padding: 0.8em 1em;
+    font-size: 1em;
+  }
+
+  .place-container .country {
+    text-align: center;
+  }
+
+  footer {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .future-forecast .today .day {
+    font-size: 0.8em;
+    padding: 0.6em;
+  }
+
+  .future-forecast .today .temp {
+    font-size: 0.8em;
+  }
+
+  .weather-forecast .weather-forecast-item {
+    padding-bottom: 0;
+  }
+
+  .weather-forecast .weather-forecast-item .temp {
+    font-size: 0.8em;
+  }
 }
+
 /* see BAM selecting and child classes */
