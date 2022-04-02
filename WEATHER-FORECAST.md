@@ -516,6 +516,8 @@ Since JavaScript uses milliseconds internally, the Date object expects the numbe
 <br>
 
 - [] Add search (use another API)
+- [] Make another window for the search of the city, which opens the Forecast when city is selected
+- [] Hide API key
 
 <br><br>
 

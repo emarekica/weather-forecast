@@ -39,7 +39,7 @@ const months = [
 
 // API key value
 
-const API_KEY = "0df4efe4d3a7d705c79d4a61ee303468";
+const API_KEY = "";
 
 // updating date & time
 setInterval(() => {
