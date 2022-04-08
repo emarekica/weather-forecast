@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/emarekica/weather-forecast/issues"
   },
-  "homepage": "https://github.com/emarekica/weather-forecast#readme"
+  "homepage": "https://github.com/emarekica/weather-forecast#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  }
 }

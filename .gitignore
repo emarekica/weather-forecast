@@ -4,5 +4,6 @@ API-fetch-example/
 API-KEY.md
 assets/
 img/
+node_modules/
 
 forecast.code-workspace
