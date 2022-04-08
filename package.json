@@ -4,7 +4,8 @@
   "description": "<br>",
   "main": "forecast.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node forecast.js",
+    "dev": "nodemon forecast.js"
   },
   "repository": {
     "type": "git",

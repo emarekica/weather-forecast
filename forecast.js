@@ -1,5 +1,27 @@
 "use strict";
 
+// dependencies
+require("dotenv").config();
+
+const express = require("express");
+const cors = require("cors");
+const app = express();
+
+// port we are listening on
+const port = 3000;
+
+// enable JSON middleware on every route that we create for API
+app.use(express.json());
+app.use(cors());
+
+//// ---------------------------------------------
+// test route
+
+app.get;
+
+//// ---------------------------------------------
+//// selecting HTML elements
+
 const timeEl = document.getElementById("time");
 const dateEl = document.getElementById("date");
 
