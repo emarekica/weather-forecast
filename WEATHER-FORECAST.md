@@ -509,6 +509,66 @@ Since JavaScript uses milliseconds internally, the Date object expects the numbe
 
 ---
 
+## Hiding API key
+
+<br>
+
+**technologies used**:
+<br>
+
+- node.js runtime
+
+- npm package manager
+  <br><br>
+
+**dependencies**:
+<br>
+
+- dotenv
+- express framework
+- cors
+- nodemon
+- node-fetch
+  <br><br>
+
+**DOTENV**
+
+- a zero-dependency module that loads environment variables from a . env file into process. env . Storing configuration in the environment separate from code.
+
+- a lightweight npm package that automatically loads environment variables from a . env file into the process
+
+<br><br>
+
+**CORS**
+
+- node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options
+
+- Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources
+
+<br><br>
+
+**Nodemon**
+
+- tool that helps develop node. js based applications by automatically restarting the node application when file changes in the directory are detected.
+
+- does not require any additional changes to your code or method of development
+
+- nodemon is a replacement wrapper for node
+
+<br><br>
+
+**node-fetch**
+
+- lightweight module that enables us to use the `fetch()` function in NodeJS, with very similar functionality as window
+
+<br><br>
+
+`use()` function is used to mount the specified middleware function(s) at the path which is being specified
+
+<br><br>
+
+---
+
 <br>
 
 ## 4. Improvements
