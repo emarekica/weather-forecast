@@ -1,6 +1,6 @@
 "use strict";
 
-////////////// --------------------- - CREATE API
+////////////// ---------------------- CREATE API
 
 // dependencies
 require("dotenv").config();
@@ -11,15 +11,17 @@ const app = express();
 
 // port we are listening on
 const port = 3000;
+const weather = require("./weather");
 
 // enable JSON middleware on every route that we create for API
 app.use(express.json());
 app.use(cors());
 
 // test route
-
-// for GET requests
 app.get("/", (req, res) => res.json({ success: "My Weather Forecasr" }));
+
+// test route defined in weather folder
+app.use("/weather", weather);
 
 // listen on a port
 app.listen(port, () => console.log(`App listening on port ${port}`));

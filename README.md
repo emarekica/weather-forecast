@@ -2,8 +2,16 @@
 
 <br>
 
-This is an exercise for JavaScript Weather API fetch.
+This is a [simple weather forecast](https://emarekica.github.io/weather-forecast/) made with a few goals:
+
+- learn how to implement `fetch()` method
+
+- working with API
+
+- hiding the API key
 
 <br><br>
 
-[See the GitHub App Page](https://emarekica.github.io/weather-forecast/)
+See more notes and details on resources [here](/WEATHER-FORECAST.md).
+
+<br><br>
