@@ -1,7 +1,7 @@
 .DS_Store
+.env
 
 API-fetch-example/
-API-KEY.md
 assets/
 img/
 node_modules/

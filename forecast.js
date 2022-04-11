@@ -6,7 +6,7 @@
 require("dotenv").config();
 
 const express = require("express");
-const cors = require("cors");
+// const cors = require("cors");
 const app = express();
 
 // port we are listening on
@@ -15,10 +15,10 @@ const weather = require("./weather");
 
 // enable JSON middleware on every route that we create for API
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
 
 // test route
-app.get("/", (req, res) => res.json({ success: "My Weather Forecasr" }));
+app.get("/", (req, res) => res.json({ success: "My Weather Forecast" }));
 
 // test route defined in weather folder
 app.use("/weather", weather);
