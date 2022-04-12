@@ -24,6 +24,20 @@ router.get("/", (req, res) => {
 });
 
 // create GET and POST weather routes
+router.get("/searchtext", async (req, res) => {
+  // unique for GET request
+  const searchtext = reque.params.searchtext;
+  const data = await fetchWeather(searchtext);
+
+  res.json(data);
+});
+
+router.post("/", async (req, res) => {
+  const searchtext = req.body.searchtext;
+  const data = await fetchWeather(searchtext);
+
+  res.json(daya);
+});
 
 // export route so you know you're using it
 module.exports = router;

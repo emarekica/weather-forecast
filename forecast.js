@@ -5,16 +5,16 @@
 // dependencies
 require("dotenv").config();
 
-const express = require("express");
+import express, { json } from "express";
 // const cors = require("cors");
 const app = express();
 
 // port we are listening on
 const port = 3000;
-const weather = require("./weather");
+import weather from "./weather";
 
 // enable JSON middleware on every route that we create for API
-app.use(express.json());
+app.use(json());
 // app.use(cors());
 
 // test route
