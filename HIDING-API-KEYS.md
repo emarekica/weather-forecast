@@ -26,6 +26,18 @@ Use [Open Weather Map API](https://openweathermap.org/api)
 
 <br><br>
 
+In the code, the API key should be referenced like this:
+<br>
+
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchtext}&units=imperial&appid=${process.env.WEATHER_API_KEY}`;
+
+<br><br>
+
+Write this in the browser:
+
+    localhost:3000/weather/Zagreb
+
+<br><br>
 **Resources**
 <br>
 

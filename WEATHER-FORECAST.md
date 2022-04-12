@@ -539,6 +539,10 @@ Since JavaScript uses milliseconds internally, the Date object expects the numbe
 
 <br><br>
 
+[dotenv GitHub documentation](https://github.com/motdotla/dotenv)
+
+<br><br>
+
 **CORS**
 
 - node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options
